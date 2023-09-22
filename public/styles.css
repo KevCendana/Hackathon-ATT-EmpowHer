@@ -46,11 +46,11 @@ header {
     padding: 0;
 }
 h1 {
-    font-size: 5.0vw;
+    font-size: calc(1.1rem + 3.8vw);
 }
 p {
     font-family: 'ATTAleckSansThin', sans-serif;
-    font-size: 3.3vw;
+    font-size: calc(.6rem + 3.2vw);
     padding: 0 .7vw 1.5vh 0;
 }
 body {
@@ -95,7 +95,6 @@ section {
     background-color: rgb(180, 180, 180);
     color: darkblue;
 }
-
 
 
 /*--------------------------------------------------------------------------------------//
@@ -184,7 +183,7 @@ section {
 //                              section4: product slideshow                             //
 //--------------------------------------------------------------------------------------*/
 .section4 {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px -10vh 0px;
     overflow:hidden;
 }
 .section4 .textContainer {
@@ -366,7 +365,7 @@ section {
 /*!news logo text part 2: 'News Api*/
 .section6 .newsLogoText2{
     font-family: 'Google', sans-serif;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: bold;
 }
 #news-container {
@@ -376,23 +375,18 @@ section {
 }
 .news-card {
     background-color: white;
-    font-size: .8em;
+    font-size: 2vw;
     border: 5px solid #009FDB; 
     border-radius :15px;       
-    min-width: 190px;
-    max-width: 300px;
-    max-height: 300px;
+    min-width: 10vw;
+    max-width: 20vw;
+    max-height: 30vw;
     color: black; 
     padding: 0.5rem; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: box-shadow 0.5s ease; 
     height: auto; 
     overflow: auto; 
-}
-.news-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-    transform: scale(1.1);  
-    transition: transform 1s ease-in-out;   
 }
 .news-card img {
     max-width: 100%; 
