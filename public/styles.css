@@ -6,7 +6,8 @@
 - Section 4: Product Slideshow
 - Section 5: Store Finder
 - Section 6: News
-- Special Effects: Fade, Slide, Hover */
+- Special Effects: Fade, Slide, Hover 
+- Footer */
 
 /*--------------------------------------------------------------------------------------//
 //                                       General:                                       //
@@ -33,9 +34,9 @@
     src: url('fonts/DidactGothicRegular.ttf') format('truetype');
 }
 body, h1, p, header, footer {
-    zoom: 0.8; /* zooms out website for other non-webkit browsers */
-    zoom: 80%; /* zooms out website for webkit browsers */
-    -moz-transform: scale(0.8, 0.8); /* zooms out website for firefox browsers */
+    zoom: 0.75; /* zooms out website for other non-webkit browsers */
+    zoom: 75%; /* zooms out website for webkit browsers */
+    -moz-transform: scale(0.75, 0.75); /* zooms out website for firefox browsers */
 
     color: white;
 }
@@ -96,6 +97,7 @@ section {
 }
 
 
+
 /*--------------------------------------------------------------------------------------//
 //                                section1: Title Card                                  //
 //--------------------------------------------------------------------------------------*/
@@ -107,7 +109,7 @@ section {
     margin: 0px 0px -10px 0px;
 }
 .section1 h1, .section1 p {
-    font-size: 1em;
+    font-size: 1;
     color: black;
 }
 .section1 p {
@@ -478,4 +480,15 @@ section {
 }
 .hoverImage {
     transition: transform 1s ease-in-out;   /* delay transition by 1 second */
+}
+
+/*--------------------------------------------------------------------------------------//
+//                                        footer                                        //
+//--------------------------------------------------------------------------------------*/
+
+footer p {
+    font-size: 2.4vh;
+    text-align: right;
+    height: 1vh;
+    color:black;
 }

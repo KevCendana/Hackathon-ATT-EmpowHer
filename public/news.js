@@ -9,15 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // function to fetch news articles from the NewsAPI
 function fetchNews() {
-    
-    // currently, the search term is hardcoded to "5G", and the number of articles is limited to '5' boxes
     const endpoint = "/.netlify/functions/fetchData";
 
-    // fetch news articles from the NewsAPI
     fetch(endpoint)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`NewsAPI returned a ${response.status} status`);
+                throw new Error(`Error fetching news: ${response.status}`);
             }
             return response.json();
         })
@@ -32,6 +29,7 @@ function fetchNews() {
             console.error("Error fetching news:", error);
         });
 }
+
 
 // function to display news articles on the page
 function displayNews(articles) {
