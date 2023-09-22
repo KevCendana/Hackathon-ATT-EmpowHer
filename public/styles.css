@@ -105,7 +105,7 @@ section {
     align-items: center;
     color:black;
     padding: 0px 0px 0px 0px;
-    margin: 0px 0px -10px 0px;
+    margin: 0px 0px -1vh 0px;
 }
 .section1 h1, .section1 p {
     font-size: 1em;
@@ -339,7 +339,6 @@ section {
 }
 
 .confirmContent p {
-    margin: 20px 0;
     color: white;
 }
 
@@ -371,7 +370,7 @@ section {
 #news-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
-    gap: 16px;
+    gap: 1.4vw;
 }
 .news-card {
     background-color: white;
@@ -474,15 +473,4 @@ section {
 }
 .hoverImage {
     transition: transform 1s ease-in-out;   /* delay transition by 1 second */
-}
-
-/*--------------------------------------------------------------------------------------//
-//                                        footer                                        //
-//--------------------------------------------------------------------------------------*/
-
-footer p {
-    font-size: 2.4vh;
-    text-align: right;
-    height: 1vh;
-    color:black;
 }
