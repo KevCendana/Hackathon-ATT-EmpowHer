@@ -1,0 +1,481 @@
+/* Table of Contents:
+- General 
+- Section 1: Title Card
+- Section 2: Nationwide Coverage
+- Section 3: State of the Art Technology
+- Section 4: Product Slideshow
+- Section 5: Store Finder
+- Section 6: News
+- Special Effects: Fade, Slide, Hover */
+
+/*--------------------------------------------------------------------------------------//
+//                                       General:                                       //
+//--------------------------------------------------------------------------------------*/
+
+/*Large ATT font*/
+@font-face {
+    font-family: 'ATTAleckSans';
+    src: url('fonts/att_fonts/ATTAleckSans_Mdlt.ttf') format('truetype');
+}
+/*Thinner ATT font*/
+@font-face {
+    font-family: 'ATTAleckSansThin';
+    src: url('fonts/att_fonts/ATTAleckSans_lt.ttf') format('truetype');
+}
+/*Google Font*/
+@font-face {
+    font-family: 'Google';
+    src: url('fonts/ProductSansRegular.ttf') format('truetype');
+}
+/*News Font*/
+@font-face {
+    font-family: 'News';
+    src: url('fonts/DidactGothicRegular.ttf') format('truetype');
+}
+body, h1, p, header, footer {
+    zoom: 0.8; /* zooms out website for other non-webkit browsers */
+    zoom: 80%; /* zooms out website for webkit browsers */
+    -moz-transform: scale(0.8, 0.8); /* zooms out website for firefox browsers */
+
+    color: white;
+}
+header {
+    font-family: 'ATTAleckSans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 5.0vw;
+}
+p {
+    font-family: 'ATTAleckSansThin', sans-serif;
+    font-size: 3.3vw;
+    padding: 0 .7vw 1.5vh 0;
+}
+body {
+    transform-origin: top left;
+    font-family: 'ATTAleckSans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+section {
+    padding: 5vh 5vw 5vh 5vw;
+    transition: all 1s;
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    justify-content: space-between; 
+}
+.flexBox {
+    display: flex;
+    align-items: center;
+}
+.glowButton {
+    display: inline-block;
+    padding: 2vw 2vw;
+    border: .1em solid white;
+    text-decoration: none;
+    color: white;
+    font-family: 'ATTAleckSansThin', sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+.glowButton:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+.glowButton:active {
+    background-color: rgb(180, 180, 180);
+    color: darkblue;
+}
+
+
+/*--------------------------------------------------------------------------------------//
+//                                section1: Title Card                                  //
+//--------------------------------------------------------------------------------------*/
+.section1 {
+    display: flex;
+    align-items: center;
+    color:black;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px -10px 0px;
+}
+.section1 h1, .section1 p {
+    font-size: 1em;
+    color: black;
+}
+.section1 p {
+    margin: 12px 10px 0 0;
+}
+.section1 .attLogo{
+    height: 45px;
+    width: 65px;
+}
+
+/*--------------------------------------------------------------------------------------//
+//                             section2: Nationwide Coverage                            //
+//--------------------------------------------------------------------------------------*/
+
+
+.section2 {
+    background-image: url('../images/bg1.jpeg');
+    background-position: 0px 10px;  
+
+    transition: box-shadow 0.3s ease;
+}
+.mapCaption {
+    font-family: 'ATTAleckSans', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.4em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.mapContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.coverageMap {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+
+/*--------------------------------------------------------------------------------------//
+//                         section3: State of the Art Technology                        //
+//--------------------------------------------------------------------------------------*/
+.section3 {
+    background-image: url('../images/bg2.jpeg');
+    background-attachment: fixed;
+}
+.textContainer {
+    flex: 1;
+}
+.videoContainer {
+    position: relative;
+    width: 60%;  
+    padding-bottom: 33.75%;  
+    overflow: hidden;
+    margin: 0 auto;  
+}
+.videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------------------------------------------------------------------------------//
+//                              section4: product slideshow                             //
+//--------------------------------------------------------------------------------------*/
+.section4 {
+    margin: 0px 0px 0px 0px;
+    overflow:hidden;
+}
+.section4 .textContainer {
+    margin-right: 10vw;
+}
+.section4 .slideBox {
+    width: 25vw;
+    height: 20vh;
+    font-family: 'ATTAleckSansthin', sans-serif;
+    font-size: 2em;
+    border-radius: 10px;
+}
+.section4 .slideBox img {
+    width: 90%; 
+    height: 70%; 
+}
+.section4, .section4 * {
+    color: black;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+.section4 .glowButton {
+    color:white;
+    background-color: #009FDB;
+    border: #009FDB;
+}
+.section4 .glowButton:hover {
+    background-color: blue;
+    border: blue;
+}
+
+/*--------------------------------------------------------------------------------------//
+//                              section5: store finder                                  //
+//--------------------------------------------------------------------------------------*/
+.section5 {
+    color: #009FDB; 
+}
+.section5 .textContainer {
+}
+.section5 h1, .section5 p {
+    color: black;
+}
+.section5 .findStoreButton {
+    width: 30vw;
+    height: 7vw;
+}
+.section5 .googleButton {
+    font-family: 'Google', sans-serif;
+    font-size: 2.35vw;
+    background: linear-gradient(45deg, #fa4131, #679ff8, #65ff8e, #ffe598);
+    border: .1em solid; 
+    border-image-source: linear-gradient(45deg, #da4b38, #5d86d4, #5ce287, #ffecac);
+    border-image-slice: 1;
+    position:relative;
+    color: white;
+    background-color: #009FDB;
+}
+.section5 .googleButton:hover {
+    box-shadow: 
+        6px 6px 15px #7ca1f8, 
+        -6px -6px 15px #fb7c72, 
+        6px -6px 15px #67ff8d, 
+        -6px 6px 15px #f2fc62; 
+    transform: scale(1.05); 
+    transition: transform(1s);
+}
+.section5 .googleButton:active {
+    background: linear-gradient(45deg, #d93723, #507cd0, #4cdf7a, #e0c87a);
+    border: none;
+}
+.section5 .googleButtonAndCaption {
+    display: flex;
+    align-items: center; 
+    gap: 2vw;
+}
+.section5 .googleInfo {
+    display: flex;
+    align-items: center;
+}
+.section5 .googleInfo img {
+    margin: 0 2px 0 2px;
+    padding: 7px 0 0 0;
+    width: 3vw; 
+    height: 2.9vw; 
+}
+.section5 .googleText1 { 
+    padding: 4px 2px 0 1px;
+    font-family: 'ATTAleckSansThin', sans-serif;
+    font-size: 2.5vw;
+    color: #009FDB;
+
+}
+.section5 .googleText2{
+    padding: 6px 0px 0px 0px;
+    font-family: 'Google', sans-serif;
+    font-size: 2.5vw;
+    color: black;
+}
+.mapArea {
+    margin: 5% 5% 5% 0;
+    width: 40vw; 
+    height: 40vw; 
+    position: relative; 
+}
+#map, #mapPlaceholder {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+#mapPlaceholder img {
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#map
+{
+    opacity: 0;
+    transition: opacity 0.3s; 
+}
+.customConfirm {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 25px;
+    z-index: 1000;
+}
+
+.confirmContent {
+    font-family: 'Google', sans-serif;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #009FDB;
+    border: 7px solid #009FDB;
+    border-radius: 25px;
+}
+
+.confirmContent p {
+    margin: 20px 0;
+    color: white;
+}
+
+/*--------------------------------------------------------------------------------------//
+//                                     section6: News                                   //
+//--------------------------------------------------------------------------------------*/
+.section6{
+    background-image: url('../images/bg3.png');
+    background-size:cover;
+    background-position: 0px 0px;
+}
+.section6 .newsApiInfo img {
+    height: 50px;
+    width: 50px;
+}
+/*!newsLogoText1: 'Powered By'*/
+.section6 .newsLogoText1 {
+    font-family: 'ATTAleckSansThin', sans-serif;
+    font-size: .8em;
+    color: white;
+    padding: 0px 0px 0px 50px;
+}
+/*!news logo text part 2: 'News Api*/
+.section6 .newsLogoText2{
+    font-family: 'Google', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 16px;
+}
+.news-card {
+    background-color: white;
+    font-size: .8em;
+    border: 5px solid #009FDB; 
+    border-radius :15px;       
+    min-width: 190px;
+    max-width: 300px;
+    max-height: 300px;
+    color: black; 
+    padding: 0.5rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.5s ease; 
+    height: auto; 
+    overflow: auto; 
+}
+.news-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.1);  
+    transition: transform 1s ease-in-out;   
+}
+.news-card img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-bottom: 0.5rem; 
+}
+.news-card h3 {
+    margin: 0 0 0.5rem 0; 
+}
+.news-card p {
+    color: black; 
+    font-size: 0.7rem; 
+    margin: 0 0 1rem 0; 
+}
+.news-card a {
+    font-size: 0.7rem; 
+    color: #007BFF; 
+    text-decoration: none; 
+}
+.news-card a:hover {
+    text-decoration: underline; 
+}
+
+/*--------------------------------------------------------------------------------------//
+//                         Special Effects: Fade, Slide, Hover                          //
+//--------------------------------------------------------------------------------------*/
+
+.zoomIn:hover {
+    transform: scale(1.1); /* each section zooms in a bit when hovered over */
+    transition: transform .6s ease-in-out;
+}
+/*!fadeIn*/
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* different fadeIn classes with different speeds */
+.fadeIn {
+    opacity: 0; /* make the element invisible at first*/
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+ }
+ .fadeSpeed1{
+    animation-delay: 1s;
+ }
+
+ /*!fadeOut*/
+ .fadeOut {
+    opacity: 0;
+    transition: opacity 0.3s; 
+}
+
+/*!slideIn*/
+ @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+.slideIn {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+/*!fadeAndSlideIn combines the fadeIn and slideIn animations*/
+@keyframes fadeInSlideIn {
+    0% { 
+        opacity: 0;
+        transform: translateX(-3.5%);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+.fadeInSlideIn {
+    animation-name: fadeInSlideIn;
+    animation-duration: 1.5s; /* adjust as needed */
+    animation-fill-mode: forwards;
+}
+.hoverImage:hover {
+    filter:url(#glow);
+    transform: scale(1.05);  /* increase image size by 10% when hover */
+    transition: transform .7s ease-in-out;   /* delay transition by 1 second */
+}
+.hoverImage {
+    transition: transform 1s ease-in-out;   /* delay transition by 1 second */
+}

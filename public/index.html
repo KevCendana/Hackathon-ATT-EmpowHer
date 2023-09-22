@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--svg glow filter for pngs: gives a pretty white-ish glow for pngs when hovered over :)-->
+    <svg style="display: none;">
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+            <feColorMatrix in="coloredBlur" type="matrix" values="2 0 0 0 0 
+                                                                 0 2 0 0 0 
+                                                                 0 0 2 0 0 
+                                                                 0 0 0 1 0" result="whitenedBlur"/>
+            <feMerge>
+                <feMergeNode in="whitenedBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </svg>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT&T 5G Coverage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--section1: Title-->
+    <section class = "section1 flexBox">
+        <img class = "attLogo" src="../images/attLogo.png" alt="AT&T Logo">
+        <h1 class = "textContainer">AT&T</h1>
+        <div class = "empowHerContainer">
+            <p>Hackathon: <i>EmpowHer</i></p>
+        </div>
+    </section>
+
+    <!--section2: Nationwide Coverage-->
+    <section class = "flexBox section2">
+        <div class = "textContainer fadeInSlideIn">
+            <h1> Nationwide Coverage </h1>
+            <p>As America's most reliable 5g network, AT&T gives over 285 million people around the globe access to high speed internet. </p>
+            <a href="https://www.att.com/5g/consumer/" class="glowButton">5G Availability</a>
+        </div>
+        <div class = "fadeIn fadeSpeed1 mapContainer">  
+            <img class = "coverageMap  hoverImage" src="../images/5g_coverage_nobg.png" alt="5G Map">
+            <caption class = "mapCaption"> AT&T's 5G Coverage</caption>
+        </div>    
+    </section>
+
+    <!--section3: State of the Art Technology-->
+    <section class = "section3 flexBox"> 
+        <div class = "textContainer fadeInSlideIn">
+            <h1> State of the Art Technology </h1>
+            <p>Surpassing the speed of 4G, AT&T's new 5G technology has limitless potential for enhancing communcation. 
+            Millions of users worldwide can enjoy the cutting-edge 5G speeds while streaming videos, downloading apps, and playing games.
+            </p>
+            <a href="https://www.att.com/5g/coverage-map/?source=EPcc000000000000U" class="glowButton">About 5G</a>
+        </div>
+        <div class="videoContainer fadeIn fadeSpeed1">
+            <iframe src="https://www.youtube.com/embed/PAqEjQjxgdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!--section4: Product Slider-->
+    <section class="section4 flexBox">
+        <div class = "textContainer fadeInSlideIn">
+            <h1> Cutting Edge Products </h1>
+            <p> Whether you want a brand new iPhone or Android, AT&T's 5G technology has you covered. 
+                With ultra-fast connectivity, reduced latency, and enhanced bandwidth, AT&T's 5G-ready devices promise to revolutionize the way users communicate, work, and entertain, setting a new benchmark for the future of wireless technology. </p>
+            <a href="https://www.att.com/buy/phones/browse/5g/" class="glowButton">Browse Devices</a>
+        </div>
+        <div class = "slideBox"> 
+            <!-- Slide 1 -->
+            <div class="slide fadeInSlideIn zoomIn">
+                <img src="../images/iPhone15ProMax.png" alt="Product 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide fadeInSlideIn">
+                <img src="../images/galaxyZ.png" alt="Product 2">
+            </div>
+        </div>
+    </section>    
+
+    <!--section5: GoogleMaps Find Nearby Stores-->
+    <section class = "flexBox section5"> 
+        <div class = "mapArea hoverImage">
+            <div id = "mapPlaceholder">
+                <img src = "images/atthq.jpeg" alt "AT&T Headquarters" id = "mapPlaceholderImage">
+            </div>
+            <div id="map"></div>
+         </div>
+        <div class = "textContainer fadeInSlideIn">
+            <div class = "textContainer fadeInSlideIn">
+                <h1>Always Connected </h1>
+                <p> No matter where you find yourself on the map, the iconic AT&T emblem is just around the corner. 
+                    Click the button below to find your nearest AT&T stores.
+                </p>
+            </div>
+            <div id="customConfirm" class="customConfirm">
+                <div class="confirmContent">
+                    <p>Click "Confirm" to share your location and display nearby AT&T stores in GoogleMaps inside this window.</p>
+                    <button class="glowButton" id="confirmBtn">Confirm</button>
+                    <button class="glowButton" id="cancelBtn">Cancel</button>
+                </div> 
+            </div>
+            <div class="googleButtonAndCaption">
+                <button class="findStoreButton googleButton glowButton" id="locateMe"> Find Stores Near Me</button>
+                <div class="googleInfo">
+                    <p class="googleText1">Powered by</p>
+                    <img src="../images/googleMapsLogo.png" alt="Google Maps Logo"> 
+                    <span class="googleText2 googleFont">GoogleMaps</span>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!--section6: News API-->
+    <section class = "section6">
+        <h1>Latest 5G News</h1>
+        <p>Stay up to date with the latest 5G news and updates.</p>
+        <div id="news-container"></div>
+        <div class = "newsApiInfo flexBox">
+            <p class = "newsLogoText1">Powered by</p>
+            <img src="../images/newsApiLogo.png" alt="News API Logo"> 
+            <span class = "newsLogoText2">News API</span>
+        </div>
+    </section>
+</body>
+<script src="maps.js"></script>
+<script src="news.js"></script>
+<script src="scripts.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABc0tIF5O7gavsJISQZXoQW96kPCGIk9g&libraries=places&callback=initMap"></script>
+<head>
+</html>
