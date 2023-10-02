@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const indexPath = path.join(__dirname, '..', '..', 'public', 'index.html');
-const apiKey = process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyABc0tIF5O7gavsJISQZXoQW96kPCGIk9g';
+const apiKey = process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyA7z29GxRo_ticnlQ-p4qApvnSqbV67py0';
 
 console.log("injecting Google Maps API key into index.html");
 
