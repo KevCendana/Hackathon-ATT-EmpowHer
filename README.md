@@ -2,6 +2,14 @@
 
 ### **Deployment: [Check out the website!](https://attempowherhackathon.netlify.app/)**
 I deployed the website using Netlify, a popular platform for deploying web projects!
+
+<div>
+  <img src="pictures_of_final_website/section1.png" width="530" height="220" alt="website_section1">
+  <img src="pictures_of_final_website/section2.png" width="530" height="240" alt="website_section2">
+  <img src="pictures_of_final_website/section3.png" width="530" height="380" alt="website_section3">
+  <img src="pictures_of_final_website/section4.png" width="530" height="240" alt="website_section4">
+</div>
+
 ### Overview:
 
 During this hackathon, I developed a dynamic and interactive website for AT&T, focusing on their 5G services. The website was crafted using a combination of **HTML, CSS, and JavaScript**, and was deployed using **Netlify.**
